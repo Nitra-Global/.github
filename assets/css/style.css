@@ -1,0 +1,264 @@
+/* Basic Reset & Typography */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --container-width: 960px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e9ecef;
+    margin-bottom: 30px;
+}
+
+#hero img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#hero h2 {
+    color: var(--primary-color);
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.project-item h3 {
+    color: var(--primary-color);
+}
+
+/* Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact form button {
+    align-self: flex-start;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Privacy Policy Page Specific */
+#privacy-policy-content h3 {
+    color: var(--primary-color);
+    margin-top: 25px;
+}
+
+#privacy-policy-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Ad Blocker Warning */
+.ad-blocker-warning {
+    background-color: #fff3cd; /* Light yellow */
+    color: #856404; /* Dark yellow text */
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ad-blocker-warning h3 {
+    color: #856404;
+    margin-top: 0;
+}
+
+.ad-blocker-warning button {
+    background-color: #f0ad4e; /* Orange */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.ad-blocker-warning button:hover {
+    background-color: #ec971f;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Cookie Banner Styles */
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+
+#cookie-banner p {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#cookie-banner button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#cookie-banner button:hover {
+    background-color: #0056b3;
+}
+
+#cookie-preferences {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#cookie-preferences label {
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
